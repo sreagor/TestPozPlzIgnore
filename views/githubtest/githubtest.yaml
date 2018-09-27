@@ -1,0 +1,6 @@
+Database Name: demo
+Settings:
+  Materialize View: false
+  Metadata:
+    Description: This is a test of the View Pushes
+    Owner: mreagor@periscopedata.com

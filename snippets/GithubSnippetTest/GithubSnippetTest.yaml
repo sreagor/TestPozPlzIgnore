@@ -1,0 +1,6 @@
+Parameters:
+- database
+Settings:
+  Metadata:
+    Description: This is a test of the Github snippet YAML
+    Owner: mreagor@periscopedata.com
