@@ -1,1 +1,1 @@
-select count(*) from [database]
+select * from [database]
