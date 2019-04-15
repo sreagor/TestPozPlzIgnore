@@ -1,0 +1,196 @@
+{
+  "Name": "OpenBUG",
+  "CreationDate": "2019-4-15",
+  "Commands": [
+    {
+      "Command": "prompt",
+      "Target": "New Bug? Press confirm. Current bug? Enter ticket info! @EXAMP-123",
+      "Value": "JiraName"
+    },
+    {
+      "Command": "bringBrowserToForeground",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//*[@data-attribute-id=\"custom_data.site_id\"]@data-value",
+      "Value": "SiteID"
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//*[@data-attribute-id=\"name\"]@data-value",
+      "Value": "UserName"
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//*[@data-attribute-id=\"email\"]@data-value",
+      "Value": "UserEmail"
+    },
+    {
+      "Command": "storeAttribute",
+      "Target": "//*[@data-attribute-id=\"custom_data.site_name\"]@data-value",
+      "Value": "SiteName"
+    },
+    {
+      "Command": "store",
+      "Target": "${!URL}",
+      "Value": "IntercomLink"
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=open",
+      "Value": "https://periscopedata.atlassian.net/secure/BrowseProjects.jspa?page=1&selectedCategory=all&selectedProjectType=all&sortKey=name&sortOrder=ASC"
+    },
+    {
+      "Command": "if",
+      "Target": "\"${JiraName}\".split(\"-\")[1] > 123",
+      "Value": ""
+    },
+    {
+      "Command": "open",
+      "Target": "https://periscopedata.atlassian.net/browse/${JiraName}",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=Edit",
+      "Value": ""
+    },
+    {
+      "Command": "storeValue",
+      "Target": "id=customfield_10100",
+      "Value": "CurrentCustomers"
+    },
+    {
+      "Command": "type",
+      "Target": "id=customfield_10100",
+      "Value": "${CurrentCustomers}, ${UserEmail}"
+    },
+    {
+      "Command": "storeValue",
+      "Target": "id=customfield_10101",
+      "Value": "CurrentSites"
+    },
+    {
+      "Command": "type",
+      "Target": "id=customfield_10101",
+      "Value": "${CurrentSites}, ${SiteName}"
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"jira-frontend\"]/div[1]/div[1]/div[1]/div[1]/span/div/div[1]/div[4]/div/div/div/button",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=project-field",
+      "Value": "Bugs (BUGS)"
+    },
+    {
+      "Command": "click",
+      "Target": "link=Bugs (BUGS)",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=customfield_10101",
+      "Value": "${SiteName}"
+    },
+    {
+      "Command": "type",
+      "Target": "id=customfield_10100",
+      "Value": "${UserEmail}"
+    },
+    {
+      "Command": "type",
+      "Target": "id=customfield_10102",
+      "Value": "None."
+    },
+    {
+      "Command": "type",
+      "Target": "id=description",
+      "Value": "SiteID: ${SiteID} \\nSite Name: ${SiteName} \\nIntercom Link: ${IntercomLink} \\n\\nDescription:"
+    },
+    {
+      "Command": "click",
+      "Target": "id=summary",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "yes",
+      "Value": "Continue"
+    },
+    {
+      "Command": "if",
+      "Target": "\"${JiraName}\".split(\"-\")[1] > 123",
+      "Value": ""
+    },
+    {
+      "Command": "prompt",
+      "Target": "If the following looks correct, press Enter to Continue.@Press Cancel To Exit.",
+      "Value": "Continue"
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if",
+      "Target": "\"${Continue}\" != \"yes\"",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"edit-issue-submit\"]",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=opsbar-operations_more",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"io.toolsplus.atlassian.connect.jira.intercom__issue-operation-intercom-conversatation-link\"]/span",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "//*[@id=\"addon-container\"]/div/div/div/div/div/div/input",
+      "Value": "${IntercomLink}"
+    },
+    {
+      "Command": "click",
+      "Target": "id=ap-button-2",
+      "Value": ""
+    },
+    {
+      "Command": "else",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "endif",
+      "Target": "",
+      "Value": ""
+    }
+  ]
+}
