@@ -3,8 +3,8 @@ database_name: demo
 display_name: Untitled Chart
 encrypted_definition: x8AI2LnF48HlnjLNjp8L/3QYEfXTEZf6KmcdKhKVP+DFOrVf4D2o3LZEhJiTz7vrAmEKtccaflYSBv1VKVY2QwoHbA+GrKTkJ13C6ma+fKRVPZzKpApQ6W6KJiS46MVlpLBnZAiws1o6CZjh9dDNcqPuePvvu/iAa2t6HtflyTo8Hx+G7eaVHEyDiw3lZ0b1tnShRdg93rm8yhqW/DuFow==
 position:
-  left: 0
-  top: 20
+  left: 30
+  top: 10
 size:
   height: 10
   width: 30
