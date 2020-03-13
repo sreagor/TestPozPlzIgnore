@@ -1,5 +1,5 @@
 dashboard_preferences:
   settings:
     owner: ""
-disable_filters: true
-display_name: ""
+disable_filters: false
+display_name: Untitled Dashboard
