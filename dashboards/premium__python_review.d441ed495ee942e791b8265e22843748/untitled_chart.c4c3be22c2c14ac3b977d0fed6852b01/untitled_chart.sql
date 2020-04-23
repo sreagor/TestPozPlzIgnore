@@ -1,0 +1,1 @@
+select * from [premiumforecasting] limit 10
